@@ -1,0 +1,326 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font and Base Settings */
+body, html {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, serif;
+    height: 100%;
+    font-size: 100%;
+
+}
+
+body {
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns header content to the right */
+    background-color: #466485; /* Or your chosen header color */
+    padding: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    background-image: linear-gradient(to right, #ffa600, #d90808);
+    background-clip: text;
+    color: transparent;
+
+}
+
+header, footer {
+    background-color: #003f5c;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Aligns navigation items to the right */
+    list-style-type: none;
+    padding: 0;
+
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    display: flex; /* Ensures the link fills the <li> */
+    /*border: 2px solid transparent;*/
+
+}
+
+nav ul li:hover {
+    border-color: #ffa600; /* Change to the desired hover color */
+
+}
+
+header nav ul li.active {
+    color: #ffa600; /* Color changes on hover and for active class */
+    border: 2px solid #ffa600;
+}
+
+header nav ul li.active {
+    color: #ffa600;
+    background-color: #3c4638;
+}
+
+nav ul li a:hover {
+    color: #ffa600; /* Change to the desired hover color */
+}
+
+header nav ul li {
+    border: 2px solid #a8a2a2;
+    padding: 0;
+
+}
+
+/* "About Me" section styles */
+
+header h2 {
+    position: relative;
+    color: #ffffff;
+    padding-top: 34px;
+    width: 100%;
+}
+
+header h2::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #b9a03d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.paragraph {
+    margin-bottom: 10px;
+    margin: 2em;
+    padding-bottom: 1em;
+    line-height: 3em;
+}
+
+
+/* Animation style   */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav ul li a {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* footer styles */
+footer {
+    background-color: #003f5c;
+    padding: 2em;
+}
+
+.menu, .social {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.menu li {
+
+    padding-right: 0.5em;
+}
+
+.social li {
+    padding-right: 0.5em;
+}
+
+.social li a {
+    color: white;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+}
+
+.menu li a:hover {
+    color: #ffa600; /* Change text color on hover */
+}
+
+footer ul li:hover {
+    border-color: #ffa600; /* Change to the desired hover color */
+
+}
+
+footer .menu li a:hover {
+    color: #ffa600; /* Change text color on hover */
+}
+
+footer .social li a:hover {
+    color: #ffa600; /* Change text color on hover */
+}
+
+/* More specific hover rule for changing border color */
+footer .menu li:hover {
+    border-color: #ffa600; /* Change to the desired hover color */
+}
+
+.project-image {
+    /* Styles for wrapping images based on available space */
+    width: auto; /* Adjust as needed */
+    margin: 0 auto; /* Centering if needed */
+}
+
+.footer .menu a:hover, .footer .social a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.footer .menu a, .footer .social a {
+    color: white; /* Set the link text color to white */
+    padding: 0.5rem; /* Add padding around the links */
+    /* Optional: Removes the underline from links */
+    text-decoration: underline;
+    animation: fadeIn 1s ease-in-out forwards;
+
+}
+
+/* Responsive design for small devices */
+@media (max-width: 768px) {
+    /* Header and Footer */
+    header, footer {
+        flex-direction: column;
+        align-items: stretch; /* Stretch to full width */
+        width: 100%;
+    }
+
+    /* Navigation Styles */
+    nav {
+        padding: 1em; /* Adds padding inside the nav bar */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left; /* Align text to the left */
+
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center; /* Center text for header nav items */
+        padding: 10px; /* Padding inside each nav item */
+        margin-bottom: 10px; /* Space between nav items */
+    }
+
+    nav ul li a.active {
+        color: #ffa600; /* Color changes on hover and for active class */
+    }
+
+    /* Footer Main Styles */
+    .menu {
+        justify-content: left;
+        flex-direction: column;
+
+    }
+
+    .menu li {
+        margin-bottom: 1em;
+        list-style-type: '>';
+        color: white;
+    }
+
+    .social {
+        flex-direction: column;
+        justify-content: left;
+        border-top: 1px solid grey;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .social li {
+        padding-bottom: 1em;
+    }
+
+
+    /* Project Image Styles */
+    .project-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.contact-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    margin-bottom: 15px;
+}
+
+.contact-form p input,
+.contact-form p textarea {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #197519;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #4cae4c;
+}
+
+.copy-write {
+    padding: 10px;
+    font-size: 100%;
+
+}
